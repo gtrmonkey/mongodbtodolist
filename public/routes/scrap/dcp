@@ -1,0 +1,15 @@
+
+$('body').on('click', '.delete',function (event) {
+	const todoIndex= $(this).attr('data-index');
+	$.ajax({
+		url: `/api/todos/${todoIndex}`,
+		method: 'DELETE'
+	})
+	.then(function (data) {
+		if (data.success){
+			render ();
+		} else {
+			alert('Error');
+		}
+	});
+});
