@@ -21,7 +21,7 @@ $(function() {
         console.log(e + "   " + index);
         const todoTag = $('<li>');
         const checkedbox = $('<input type="checkbox"/>');
-        todoTag.text(e.ListName);
+        todoTag.text(e.todoName);
         const button = $('<i type="submit" id="delete" class="fas fa-times"></i>');
         button.addClass('delete');
         button.attr('data-index', index);
